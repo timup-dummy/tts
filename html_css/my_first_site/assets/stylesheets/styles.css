@@ -1,0 +1,12 @@
+body {
+	background-color: chartreuse;
+}
+
+h1 {
+	font-family: fantasy;
+	text-align: center;
+}
+
+#fav{
+	color:magenta;
+}
