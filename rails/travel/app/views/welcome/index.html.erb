@@ -1,0 +1,15 @@
+<h1>Welcome to my Travel Site</h1>
+<p>This is my very awesome travel site.</p>
+
+<p>Some day I'd like to visit: <strong><%= @homeland %></strong></p>
+
+<ul>
+<% @countries.each do |country| %>
+	<li><%= country %></li>
+	<% end %>
+</ul>
+
+<% @travel_pics.each do |pic| %>
+  <p><%= image_tag pic %></p>
+<% end %>
+
