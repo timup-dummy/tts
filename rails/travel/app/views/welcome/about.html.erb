@@ -16,3 +16,6 @@
 <% else %>
   <p>My shoe size is <%= @size %></p>
 <% end %>
+
+<%= link_to "Blue", {controller: 'welcome', action: 'about', color: 'blue'}, class: "btn btn-primary" %>
+<%= link_to "Chartreuse", {controller: 'welcome', action: 'about', color: 'chartreuse'}, class: "btn btn-success", id: 'chartreuse_btn' %>

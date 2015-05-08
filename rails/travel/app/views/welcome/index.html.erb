@@ -9,7 +9,7 @@
 	<% end %>
 </ul>
 
-<% @travel_pics.each do |pic| %>
-  <p><%= image_tag pic %></p>
+<% @travel_pics.each do |image| %>
+  <p><%= image_tag image, class: "img-responsive", width: "1000" %></p>
 <% end %>
 
