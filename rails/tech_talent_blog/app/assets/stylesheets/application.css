@@ -14,7 +14,10 @@
  *= require_self
  */
 
-#chartreuse_btn{
-	background-color: chartreuse;
-	/*border-color: red;*/
+.cant-see-me{
+	display: none;
+}
+
+body {
+	/*background-color: #00ff00;*/
 }
