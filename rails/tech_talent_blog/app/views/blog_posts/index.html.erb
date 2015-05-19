@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
 
+<p>Welcome <%= current_user.email %>!</p>
+
 <h1>Current Blog Posts</h1>
 
 <div class="row">
@@ -10,7 +12,7 @@
 					<%= link_to blog_post.title, blog_post %>
 				</div>
 				<div class="panel-body">
-					by <%= blog_post.author %><br />
+					by <%= blog_post.user.email %><br />
 					<p><%= blog_post.blog_entry[0..500] %>...[<%= link_to 'Read More', blog_post %>]</p>
 				</div>
 				<div class="panel-footer">
