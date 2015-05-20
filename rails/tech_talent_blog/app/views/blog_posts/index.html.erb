@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>Welcome <%= current_user.email %>!</p>
+<p>Welcome <%= current_user.username %>!</p>
 
 <h1>Current Blog Posts</h1>
 
@@ -12,12 +12,16 @@
 					<%= link_to blog_post.title, blog_post %>
 				</div>
 				<div class="panel-body">
-					by <%= blog_post.user.email %><br />
+					by <%= link_to blog_post.user.username, user_profile_path(id: blog_post.user.id) %><br />
 					<p><%= blog_post.blog_entry[0..500] %>...[<%= link_to 'Read More', blog_post %>]</p>
 				</div>
 				<div class="panel-footer">
+					<% if current_user.id == blog_post.user.id %>
+					<div class="panel-footer">
 					<%= link_to 'Edit', edit_blog_post_path(blog_post), class: 'btn btn-warning' %>
 					<%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+				</div>
+				<% end %>
 				</div>
 			</div>
 		</div>
